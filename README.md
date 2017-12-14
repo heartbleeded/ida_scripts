@@ -1,14 +1,16 @@
 # ida_scripts
 
-* IDA pwntools auto attach
-Put idapwntools.py in IDA plugins folder. After loading binary, press Shift+Z to open XMLRPC server.
+* IDA pwntools auto attach:
 
-Script for pwntools:
-[code]
-p = process(["./test"], env={"LD_PRELOAD" : "./libc-2.23.so"})
-proxy = xmlrpclib.ServerProxy("http://localhost:1337")#IDA_Server
-proxy.Attach(str(p.pid))
-raw_input()
-[code]
+  Place idapwntools.py into IDA plugin folder. After loading binary, press Shift+Z to open XMLRPC server.
 
-Then switch to IDA windows and press Shift+Z to attach running process in pwntools.
+  Script for pwntools:
+
+  ```
+  p = process(["./test"], env={"LD_PRELOAD" : "./libc-2.23.so"})
+  proxy = xmlrpclib.ServerProxy("http://localhost:1337")#IDA_Server
+  proxy.Attach(str(p.pid))
+  raw_input()
+  ```
+
+  Then switch to IDA windows and press Shift+Z to attach running process in pwntools.
