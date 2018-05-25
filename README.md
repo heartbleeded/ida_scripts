@@ -14,3 +14,6 @@
   ```
 
   Then switch to IDA windows and press Shift+Z to attach running process in pwntools.
+
+* Python DYLIB path patches for IDA (tested on 7.0)
+  Place patch in IDA_DIR and execute. Working around for IDA vs brew python (2.7.15), and allow to install z3, angr, etc. on MacOS.
